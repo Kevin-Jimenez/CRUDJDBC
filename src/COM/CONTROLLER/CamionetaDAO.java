@@ -23,6 +23,8 @@ public class CamionetaDAO {
             ps.setInt(3,cam.getCilindraje());
             ps.setString(4, cam.getPais());
             ps.setInt(5, cam.getConcesionarioIdentificacion());
+            
+            rowsAffected = ps.executeUpdate();
         }catch(SQLException e){
             e.printStackTrace();
         }
@@ -37,7 +39,7 @@ public class CamionetaDAO {
     //Method Select type list return list 
     public static ArrayList<Camioneta> readCamioneta(Connection con){
         ArrayList<Camioneta> listSuv = new ArrayList<>();
-        String query = "SELECT PLACA, CILINDRAJE,PAIS * FROM CAMIONETA";
+        String query = "SELECT placa, cilindraje,pais FROM camioneta";
         
         try{
             PreparedStatement ps = con.prepareStatement(query);

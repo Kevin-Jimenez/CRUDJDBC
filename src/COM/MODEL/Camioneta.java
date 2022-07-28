@@ -66,7 +66,7 @@ public class Camioneta {
 
     @Override
     public String toString() {
-        return "Camioneta{" + "id=" + id + ", placa=" + placa + ", cilindraje=" + cilindraje + ", pais=" + pais + ", concesionarioIdentificacion=" + concesionarioIdentificacion + '}';
+        return "\t\tCamioneta \nPlaca: " + placa + "\nCilindraje: " + cilindraje + "\nPais:" + pais ;
     }
     
 }
